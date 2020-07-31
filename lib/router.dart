@@ -17,6 +17,8 @@ class Router {
         return CubeRoute(MyHomePage(), MyHomePage());
       case visualization:
         var data = settings.arguments as String;
+        return CubeRoute(MyHomePage(), VisualizationScreen(data));
+
         return MaterialPageRoute(builder: (_) => VisualizationScreen(data));
       default:
         return MaterialPageRoute(
